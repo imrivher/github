@@ -1,0 +1,30 @@
+body {
+}
+
+#container {
+    max-width: 1200px;
+    min-width: 800px;
+
+    margin: auto;
+    padding: 25px;
+}
+
+h1, h2, h3 {
+    font-family: Gloock;
+}
+
+#banner {
+    cursor:pointer;
+    width: 1100px;
+    height: 250px;
+
+    border: solid 10px black;
+}
+
+main {
+    display: flex;
+}
+
+ul {
+    list-style-type: none
+}
