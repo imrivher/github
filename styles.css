@@ -1,16 +1,65 @@
+/* default styles */
+/*
+* Remove the margin in all browsers.
+*/
 body {
+  margin: 0;
+}
+
+/*
+* Render the `main` element consistently in IE.
+*/
+main {
+  display: block;
+}
+
+/* my styles */
+body {
+    background-color: #1a1a1a;
 }
 
 #container {
     max-width: 1200px;
     min-width: 800px;
+    height: 750px;
+
+    background-color: #1a1a1a;
+    color: #e6e6e6;
 
     margin: auto;
     padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 h1, h2, h3 {
     font-family: Gloock;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+a {
+    color: #e6e6e6;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: solid 5px #e6e6e6;
 }
 
 #banner {
@@ -18,11 +67,19 @@ h1, h2, h3 {
     width: 1100px;
     height: 250px;
 
-    border: solid 10px black;
+    margin: auto;
+    border-style: none solid solid none;
+    border-color: #000000;
+    border-width: 10px;
 }
 
 main {
     display: flex;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
