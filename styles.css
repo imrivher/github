@@ -439,7 +439,7 @@ section h2 {
 
 section:first-of-type h2 {
     border-left: none;
-    border-right: none;
+    border-right: solid 10px #e6e6e6;
 }
 
 section:last-of-type h2 {
