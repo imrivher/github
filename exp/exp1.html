@@ -4,33 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>expiriment 1</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <h1>expiriment 1</h1>
+        <h1>expiriment 1: flip</h1>
 
-        <h2>open the console using f12 to see the code!</h2>
+        <h2>open the console using <strong>ctrl + shift + j</strong> to see the code!</h2>
 
         <script>
             // this program plays a game called flip. it gets user input for which side of a coin they would like to 'call', if not a valid answer, it will continue to query until a valid response is obtained. after it gets this it will compare the users call to its own call, read off the results, and determine a winner.
             var cl = console.log
 
+            // sequence
             var userCall = prompt(`heads or tails?`, ``).toLowerCase();
             var result = [`tails`, `heads`, `heads`];
-            // var result = [];
             var loops = 0;
 
-            // for(var i=0; i<3; i++){
-            //     var flip = Math.random(0, 1);
-            //     cl(flip);
-            //     if(flip === 0){
-            //         result[i] = `heads`;
-            //     } else {
-            //         result[i] = `tails`;
-            //     }
-            //     cl(result[i]);
-            // }
-
+            // selector
             if(userCall === `heads`){
                 cl(`ill take tails then! lets flip the coins (:`);
                 // loop

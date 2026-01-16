@@ -1,0 +1,30 @@
+body {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto ;
+    
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Gloock;
+    font-size: 7em;
+    text-align: center;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Gloock;
+    font-size: 3em;
+    text-align: center;
+}
+
+strong {
+    color: #FF6464;
+}
