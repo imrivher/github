@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>expiriment 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>expiriment 2: flip</h1>
+
+        <div id="houseCallText">
+            <h2>ill take</h2>
+            <h2 id="houseCall"></h2>
+            <h2>lets flip the coins!</h2>
+        </div>
+
+        <div id="coins">
+            <h3 class="coin" id="coin1">-----</h3>
+            <h3 class="coin" id="coin2">-----</h3>
+            <h3 class="coin" id="coin3">-----</h3>
+        </div>
+
+        <h2 id="resultText"></h2>
+
+        <script>
+            //#myvars
+            var userCall = prompt('heads or tails?', '').toLowerCase();
+            var houseCall;
+            var result = [];
+            var coinNum = 3;
+            var userScore = 0;
+            var houseScore = 0;
+            var winScore = 2;
+            var coinBoxes = document.querySelectorAll('.coin');
+
+            //random number generator
+            function randomInt(min, max){
+                return Math.floor((max - min + 1) * Math.random()) + min;
+            }
+
+            //sets the result of the coin flips
+            for(var i=0; i<coinNum; i++){
+                var randNum = randomInt(0, 1);
+                if(randNum === 0){
+                    result[i] = 'heads';
+                } else {
+                    result[i] = 'tails';
+                }
+            }
+
+            //defines the userCall, loops if not a valid input
+            if(userCall === 'heads'){
+                houseCall = 'tails';
+            } else if(userCall === 'tails'){
+                houseCall = 'heads';
+            } else {
+                while(userCall !== 'heads' || userCall !== 'tails'){
+                    userCall = prompt('heads or tails?', '').toLowerCase();
+                    if(userCall === 'heads'){
+                        houseCall = 'tails';
+                        break
+                    } else if(userCall === 'tails'){
+                        houseCall = 'heads';
+                        break;
+                    }
+                }
+            }
+            var houseCallText = document.createTextNode(houseCall);
+            //sets the text to display the houseCall
+            document.querySelector('#houseCall').appendChild(houseCallText);
+
+            for(var i=0; i<coinNum; i++){
+                if(result[i] === userCall){
+                    userScore ++;
+                } else if(result[i] === houseCall){
+                    houseScore ++;
+                }
+                // coinBoxes[i]
+                console.log(result[i], userCall, houseCall, userScore, houseScore)
+            }
+
+            //sets the result text to display
+            if(userScore === winScore){
+                var resultText = document.createTextNode('looks like you won! another round?');
+                document.querySelector('#resultText').appendChild(resultText);
+            } else if(houseScore === winScore){
+                var resultText = document.createTextNode('looks like you lost! another round?');
+                document.querySelector('#resultText').appendChild(resultText);
+            }
+        </script>
+    </body>
+</html>
