@@ -33,6 +33,21 @@ h2 {
     text-align: center;
 }
 
+#houseCallText h2:first-of-type {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#houseCallText h2:last-of-type {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#houseCall {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 strong {
     color: #FF6464;
 }

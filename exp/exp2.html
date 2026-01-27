@@ -12,14 +12,14 @@
 
         <div id="houseCallText">
             <h2>ill take</h2>
-            <h2 id="houseCall"></h2>
+            <h2 id="houseCall"><strong></strong></h2>
             <h2>lets flip the coins!</h2>
         </div>
 
         <div id="coins">
-            <h3 class="coin" id="coin1">-----</h3>
-            <h3 class="coin" id="coin2">-----</h3>
-            <h3 class="coin" id="coin3">-----</h3>
+            <div class="coin" id="coin1"><h3>-----</h3></div>
+            <div class="coin" id="coin2"><h3>-----</h3></div>
+            <div class="coin" id="coin3"><h3>-----</h3></div>
         </div>
 
         <h2 id="resultText"></h2>
@@ -69,23 +69,32 @@
             }
             var houseCallText = document.createTextNode(houseCall);
             //sets the text to display the houseCall
-            document.querySelector('#houseCall').appendChild(houseCallText);
+            document.querySelector('strong').appendChild(houseCallText);
 
+            //scores game
             for(var i=0; i<coinNum; i++){
                 if(result[i] === userCall){
                     userScore ++;
+                    var coinIMG = document.createElement('img');
+                    coinIMG.setAttribute('src', `images/${userCall}.png`);
+                    coinBoxes[i].removeChild(coinBoxes[i].children[0]);
+                    coinBoxes[i].appendChild(coinIMG);
                 } else if(result[i] === houseCall){
                     houseScore ++;
+                    var coinIMG = document.createElement('img');
+                    coinIMG.setAttribute('src', `images/${houseCall}.png`);
+                    coinBoxes[i].removeChild(coinBoxes[i].children[0]);
+                    coinBoxes[i].appendChild(coinIMG);
                 }
                 // coinBoxes[i]
-                console.log(result[i], userCall, houseCall, userScore, houseScore)
+                console.log(result[i], userCall, houseCall, userScore, houseScore);
             }
 
             //sets the result text to display
-            if(userScore === winScore){
+            if(userScore >= winScore){
                 var resultText = document.createTextNode('looks like you won! another round?');
                 document.querySelector('#resultText').appendChild(resultText);
-            } else if(houseScore === winScore){
+            } else if(houseScore >= winScore){
                 var resultText = document.createTextNode('looks like you lost! another round?');
                 document.querySelector('#resultText').appendChild(resultText);
             }
