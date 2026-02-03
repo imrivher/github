@@ -6,36 +6,89 @@
         <title>madlibs</title>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
     </head>
 
     <body>
         <header>
-
+            <h1>news article madlibs</h1>
         </header>
 
         <main>
-                <section id="input">
-                    <form>
-                        <label for=""></label>
-                        <input type="text" id="" required>
-                        <label for=""></label>
-                        <input type="text" id="" required>
-                        <label for=""></label>
-                        <input type="text" id="" required>
-                        <label for=""></label>
-                        <input type="text" id="" required>
-                        <label for=""></label>
-                        <input type="text" id="" required>
+            <section id="input" class="">
+                <form>
+                    <div>
+                        <label for="userAnimal">Give me an <strong>Animal</strong></label>
+                        <input type="text" id="userAnimal" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userNoun1" class="">Noun</label>
+                        <input type="text" id="userNoun1" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userNoun2">Noun</label>
+                        <input type="text" id="userNoun2" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userName">Name</label>
+                        <input type="text" id="userName" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userAdjective">Adjective</label>
+                        <input type="text" id="userAdjective" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userLocationOnCampus1">Location On Campus</label>
+                        <input type="text" id="userLocationOnCampus1" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb1">Verb</label>
+                        <input type="text" id="userVerb1" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userOccupation">Occupation</label>
+                        <input type="text" id="userOccupation" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb2">Verb</label>
+                        <input type="text" id="userVerb2" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userAdverb">Adverb</label>
+                        <input type="text" id="userAdverb" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb3">Verb</label>
+                        <input type="text" id="userVerb3" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userLocationOnCampus2">Location On Campus</label>
+                        <input type="text" id="userLocationOnCampus2" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userPastTenseVerb">Past Tense Verb</label>
+                        <input type="text" id="userPastTenseVerb" required>
+                    </div>
+                    <div class="hidden">
+                        <label for="userPlace">Place</label>
+                        <input type="text" id="userPlace" required>
+                    </div>
 
-                        <input type="submit">
-                    </form>
-                </section>
+                    <input type="submit">
+                </form>
 
-                <section id="output" class="hidden">
+                <img src="images/typewriter-paper.png" alt="a typewriter with paper in it" width="1000" height="984" id="typewriter">
+            </section>
 
-                </section>
+            <section id="output" class="hidden">
+                <article>
+                    <p>Breaking news! A(n) <strong>[animal]</strong> has escaped from the <strong>[Noun]</strong> Center and is currently loose on UC Davis campus! This morning, a <strong>[noun]</strong> fell onto one of the enclosure’s fences, aiding in the escape. The first report was from <strong>[name]</strong> who stated “There’s some sort of <strong>[adjective]</strong> beast roaming around <strong>[location on campus]</strong>! Somebody do something before it <strong>[verb]</strong>s!” <strong>[Occupation]</strong>s on the scene have been unable to corral the <strong>[animal]</strong>, as each time they approach, it <strong>[verb]</strong>s <strong>[adverb]</strong>. Students are advised to <strong>[verb]</strong> at <strong>[location on campus]</strong> until the <strong>[animal]</strong> can be <strong>[past tense verb]</strong>. If you cannot make your way there, then evacuate to <strong>[place]</strong>.</p>
+                </article>
+
+                <img src="images/paper.png" alt="a piece of paper" width="808" height="1000" id="paper">
+            </section>
         </main>
     </body>
 </html>
