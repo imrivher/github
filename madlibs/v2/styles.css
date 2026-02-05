@@ -1,0 +1,369 @@
+h1, h2, h3, p, figure{
+    margin: 0;
+    padding: 0;
+    /* this removes default margin/padding 
+    from these elements. You might want to add
+    a few others in here.*/   
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* this sets images as block elements
+    and makes sure they don't bust out of 
+    their containers, and that they maintain
+    their aspect ratio. */
+}
+    
+nav ul {
+    list-style-type: none;
+    /* gets rid of bullets */
+}
+
+@media screen and (max-width: 600px) {
+    /* ----- */
+
+    .hidden {
+        display: none;
+    }
+
+    html {
+        overflow: hidden;
+
+        background-color: #1a1a1a;
+        color: #e6e6e6;
+    }
+
+    header {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        
+        text-shadow: 2px 2px #1a1a1a;
+        
+    }
+
+    main {
+        max-width: 1200px;
+        height: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+
+        display: flex;
+    }
+
+    section {
+        flex: 1;
+        position: relative;
+    }
+
+    form {
+        width: 20%;
+
+        color: #993C3C;
+        text-shadow: 1px 1px #e6e6e6;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        position: absolute;
+        z-index: 10;
+        bottom: 52%;
+        left: 42%;
+    }
+
+    form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form > div > label {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: larger;
+    }
+
+    input {
+        border-radius: 0;
+
+        background: #FF6464;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+    }
+
+    input[type="submit"] {
+        background-color: #e6e6e6;
+
+        cursor: pointer;
+    }
+
+    input[type="text"]:focus {
+        border: 3px solid #993C3C;
+        outline: none;
+        box-shadow: 0 2px 4px 0 rgba(153, 60, 60, 0.8), 0 3px 10px 0 rgba(153, 60, 60, 0.8);
+    }
+
+    h1, h2, h3, label, input {
+        font-family: Gloock;
+    }
+
+    strong {text-decoration: underline;}
+
+    .typewriter {
+        width: 100%;
+
+        filter: drop-shadow(-5px 5px black);
+
+        position: absolute;
+        bottom: 0%;
+    }
+
+    /* output */
+
+    #output > .typewriter {
+        display: none;
+    }
+    #paper {
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #output > article {
+        width: 66%;
+        padding: 10px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        line-height: 2em;
+
+        color: #1a1a1a;
+        text-shadow: 1px 1px #1a1a1a;
+
+        position: absolute;
+        z-index: 10;
+        bottom: 15%;
+        right: 8%;
+    }
+
+    article strong {
+        font-weight: bolder;
+
+        color: #993C3C;
+        text-shadow: 1px 1px #FF6464;
+    }
+
+    #again, input, button{font-family: 'Courier New', Courier, monospace;}
+
+    #again {
+        cursor: pointer;
+
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-radius: 0;
+
+        background: #FF6464;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+    }
+
+    #againbutton {
+        position: absolute;
+        z-index: 10;
+        top: 15%;
+        left: 45%;
+    }
+
+    #back {
+        cursor: pointer;
+        
+        border-radius: 0;
+
+        background-color: #e6e6e6;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+    
+        position: absolute;
+        z-index: 10;
+        bottom: 66%;
+        left: 65%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    /* ----- */
+
+    .hidden {
+        display: none;
+    }
+
+    html {
+        overflow: hidden;
+
+        background-color: #1a1a1a;
+        color: #e6e6e6;
+    }
+
+    header {
+        width: fit-content;
+        
+        text-shadow: 2px 2px #1a1a1a;
+        
+        position: absolute;
+        z-index: 100;
+        top: 1em;
+        left: 33%;
+    }
+
+    main {
+        max-width: 1200px;
+        height: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+
+        display: flex;
+    }
+
+    section {
+        flex: 1;
+        position: relative;
+    }
+
+    form {
+        width: 20%;
+
+        color: #993C3C;
+        text-shadow: 1px 1px #e6e6e6;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        position: absolute;
+        z-index: 10;
+        bottom: 60%;
+        left: 17%;
+    }
+
+    form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form > div > label {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: larger;
+    }
+
+    input {
+        border-radius: 0;
+
+        background: #FF6464;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+    }
+
+    input[type="submit"] {
+        background-color: #e6e6e6;
+
+        cursor: pointer;
+    }
+
+    input[type="text"]:focus {
+        border: 3px solid #993C3C;
+        outline: none;
+        box-shadow: 0 2px 4px 0 rgba(153, 60, 60, 0.8), 0 3px 10px 0 rgba(153, 60, 60, 0.8);
+    }
+
+    h1, h2, h3, label, input {
+        font-family: Gloock;
+    }
+
+    strong {text-decoration: underline;}
+
+    .typewriter {
+        width: 60%;
+
+        filter: drop-shadow(-5px 5px black);
+
+        position: absolute;
+        bottom: -8%;
+        left: -5%;
+    }
+
+    /* output */
+    #paper {
+        width: 50%;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #output > article {
+        width: 33%;
+        padding: 10px;
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        line-height: 2em;
+
+        color: #1a1a1a;
+        text-shadow: 1px 1px #1a1a1a;
+
+        position: absolute;
+        z-index: 10;
+        bottom: 10%;
+        right: 4%;
+    }
+
+    article strong {
+        font-weight: bolder;
+
+        color: #993C3C;
+        text-shadow: 1px 1px #FF6464;
+    }
+
+    #again, input, button{font-family: 'Courier New', Courier, monospace;}
+
+    #again {
+        cursor: pointer;
+
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        border-radius: 0;
+
+        background: #FF6464;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+
+        position: absolute;
+        left: 23%;
+        bottom: 60%;
+    }
+
+    #back {
+        cursor: pointer;
+
+        border-radius: 0;
+
+        background-color: #e6e6e6;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4  );
+    
+        position: absolute;
+        z-index: 10;
+        bottom: 75%;
+        left: 35%;
+    }
+}

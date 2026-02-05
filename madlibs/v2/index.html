@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>madlibs</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>breaking news madlibs!</h1>
+        </header>
+
+        <main>
+            <section id="input">
+                <form>
+                    <div class="">
+                        <label for="userAnimal">Give me an <strong>Animal</strong></label>
+                        <input type="text" id="userAnimal">
+                    </div>
+                    <div class="hidden">
+                        <label for="userNoun1" class="">Give me a Noun</label>
+                        <input type="text" id="userNoun1">
+                    </div>
+                    <div class="hidden">
+                        <label for="userNoun2">Give me another Noun</label>
+                        <input type="text" id="userNoun2">
+                    </div>
+                    <div class="hidden">
+                        <label for="userName">Give me a Name</label>
+                        <input type="text" id="userName">
+                    </div>
+                    <div class="hidden">
+                        <label for="userAdjective">Give me an Adjective</label>
+                        <input type="text" id="userAdjective">
+                    </div>
+                    <div class="hidden">
+                        <label for="userLocationOnCampus1">Give me a Location On Campus</label>
+                        <input type="text" id="userLocationOnCampus1">
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb1">Give me a Verb</label>
+                        <input type="text" id="userVerb1">
+                    </div>
+                    <div class="hidden">
+                        <label for="userOccupation">Give me an Occupation</label>
+                        <input type="text" id="userOccupation">
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb2">Give me a Verb</label>
+                        <input type="text" id="userVerb2">
+                    </div>
+                    <div class="hidden">
+                        <label for="userAdverb">Give me an Adverb</label>
+                        <input type="text" id="userAdverb">
+                    </div>
+                    <div class="hidden">
+                        <label for="userVerb3">Give me a Verb</label>
+                        <input type="text" id="userVerb3">
+                    </div>
+                    <div class="hidden">
+                        <label for="userLocationOnCampus2">Give me a Location On Campus</label>
+                        <input type="text" id="userLocationOnCampus2">
+                    </div>
+                    <div class="hidden">
+                        <label for="userPastTenseVerb">Give me a Past Tense Verb</label>
+                        <input type="text" id="userPastTenseVerb">
+                    </div>
+                    <div class="hidden">
+                        <label for="userPlace">Give me a Place</label>
+                        <input type="text" id="userPlace">
+                    </div>
+
+                    <input type="submit" value="submit!">
+                </form>
+
+                <button id="back">back</button>
+
+                <img src="images/typewriter-paper.png" alt="a typewriter with paper in it" width="1000" height="984" class="typewriter">
+            </section>
+
+            <section id="output" class="hidden">
+                <article>
+                    <p></p>
+                </article>
+
+                <form id="againbutton">
+                    <input type="submit" value="again?" id="again">
+                </form>
+
+                <img src="images/typewriter-none.png" alt="a typewriter with no paper in it" width="1000" height="984" class="typewriter">
+                <img src="images/paper.png" alt="a piece of paper" width="808" height="1000" id="paper">
+            </section>
+        </main>
+    </body>
 </html>
