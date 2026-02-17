@@ -1,0 +1,120 @@
+html {
+    background-color: black;
+}
+
+main {
+    width: 1200px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    overflow: hidden;
+
+    background-color: white;
+}
+
+#position-box {
+    width: 1200px;
+    height: 750px;
+
+    transform: scale(150%);
+    
+    position: relative;
+    left: 5%;
+    bottom: 28%;
+}
+
+img {
+    cursor: pointer;
+
+    height: auto;
+
+    position: absolute;
+
+    transition: all 0.25s;
+}
+
+img:hover {
+    filter: drop-shadow(4px 4px red);
+
+    transition: all 0.25s;
+}
+
+#one {
+    z-index: 1;
+
+    width: 10%;
+    transform: rotate(-80deg);
+
+    left: 31%;
+    bottom: 10%;
+}
+
+    #one:hover {
+        width: 11%;
+
+        left: 29.5%;
+    }
+
+#two {
+    z-index: 1;
+
+    width: 7%;
+    transform: rotate(50deg);
+
+    left: 45%;
+    bottom: 7%;
+}
+
+    #two:hover {
+        width: 8%;
+    }
+
+#three {
+    z-index: 1;
+
+    width: 7%;
+    transform: rotate(-80deg);
+
+    left: 35%;
+    bottom: 33%;
+}
+
+    #three:hover {
+        width: 8%;
+        left: 34%;
+    }
+
+#four {
+    z-index: 2;
+
+    width: 10%;
+    transform: rotate(15deg);
+
+    left: 40%;
+    bottom: 5%;
+}
+
+    #four:hover {
+        width: 11%;
+        left: 39.5%;
+        bottom: 3.5%;
+    }
+
+#five {
+    z-index: 1;
+
+    width: 6%;   
+    transform: rotate(60deg);
+
+    left: 49%;
+    bottom: 40%;
+}
+
+    #five:hover {
+        width: 7%;
+        bottom: 39%;
+        left: 50%;
+    }
