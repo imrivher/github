@@ -1,0 +1,182 @@
+html {
+    background-color: black;
+}
+
+@font-face {
+    font-family: Sticks;
+    src: url(typefaces/Stick-Regular.ttf);
+}
+
+h1, h2, h3, p, a {
+    font-family: Sticks;
+}
+
+main .hidden {
+    display: none;
+}
+
+main {
+    width: 1200px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: hidden;
+
+    background-color: burlywood;
+
+    position: relative;
+}
+
+#borderbox {
+    width: 100%;
+    height: 100%;
+    background: url(images/stickbox-o.png);
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+
+#position-box {
+    width: 1200px;
+    height: 750px;
+
+    transform: scale(125%);
+    
+    position: absolute;
+    left: 4%;
+    bottom: 21%;
+}
+
+img {
+    cursor: pointer;
+
+    height: auto;
+
+    position: absolute;
+
+    transition: all 0.25s;
+}
+
+img:hover {
+    filter: drop-shadow(4px 4px red);
+
+    transition: filter 0.25s;
+}
+
+#one {
+    z-index: 1;
+
+    width: 10%;
+    transform: rotate(-80deg);
+
+    left: 31%;
+    bottom: 10%;
+}
+
+    #one:hover {
+        width: 11%;
+
+        left: 29.5%;
+    }
+
+    #one .focus {
+        width: 25%;
+        transform: rotate(0deg);
+
+        left: 33%;
+        bottom: 0%;
+    }
+
+#two {
+    z-index: 1;
+
+    width: 7%;
+    transform: rotate(50deg);
+
+    left: 45%;
+    bottom: 7%;
+}
+
+    #two:hover {
+        width: 8%;
+    }
+
+#three {
+    z-index: 1;
+
+    width: 7%;
+    transform: rotate(-80deg);
+
+    left: 35%;
+    bottom: 33%;
+}
+
+    #three:hover {
+        width: 8%;
+        left: 34%;
+    }
+
+#four {
+    z-index: 2;
+
+    width: 10%;
+    transform: rotate(15deg);
+
+    left: 40%;
+    bottom: 5%;
+}
+
+    #four:hover {
+        width: 11%;
+        left: 39.5%;
+        bottom: 3.5%;
+    }
+
+#five {
+    z-index: 1;
+
+    width: 6%;   
+    transform: rotate(60deg);
+
+    left: 49%;
+    bottom: 40%;
+}
+
+    #five:hover {
+        width: 7%;
+        bottom: 39%;
+        left: 50%;
+    }
+
+.textbox {
+    padding: 80px;
+    padding-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+    .textbox section {
+        flex: 1;
+
+        padding: 20px;
+
+        background-color: saddlebrown;
+    }
+
+    .story {
+        margin-right: 200px;
+
+        font-size: x-large;
+        line-height: 1.5;
+    }
+
+    .rating {
+        margin-left: 200px;
+
+        font-size: xx-large;
+        line-height: 2;
+        text-align: right;
+    }
