@@ -1,0 +1,271 @@
+html {
+    background-color: black;
+}
+
+@font-face {
+    font-family: Sticks;
+    src: url(typefaces/Stick-Regular.ttf);
+}
+
+h1, h2, h3, p, a {
+    font-family: Sticks;
+}
+
+header {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 0;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1, header h2 {
+    background-color: sienna;
+    border: 3px solid saddlebrown;
+
+    padding: 10px;
+}
+
+main .hidden {
+    display: none;
+}
+
+main {
+    width: 1200px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(images/stickbg-01.png);
+    padding-top: 20px;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+#position-box {
+    width: 1200px;
+    height: 750px;
+
+    transform: scale(125%);
+    
+    position: absolute;
+    z-index: 100;
+    left: 4%;
+    bottom: 21%;
+}
+
+img {
+    cursor: pointer;
+
+    height: auto;
+
+    position: absolute;
+
+    transition: all 0.25s;
+}
+
+img:hover {
+    filter: drop-shadow(4px 4px white);
+
+    transition: all 0.25s;
+}
+
+#one {
+    z-index: 2;
+
+    width: 10%;
+    transform: rotate(-80deg);
+
+    left: 31%;
+    bottom: 10%;
+}
+
+    #one:hover {
+        width: 11%;
+
+        left: 29.5%;
+    }
+
+    #onefocus {
+        width: 25%;
+        transform: rotate(0deg);
+
+        left: 33%;
+        bottom: 0%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#two {
+    z-index: 2;
+
+    width: 7%;
+    transform: rotate(50deg);
+
+    left: 45%;
+    bottom: 7%;
+}
+
+    #two:hover {
+        width: 8%;
+    }
+
+    #twofocus {
+        width: 16%;
+
+        transform: rotate(-10deg);
+        bottom: 0;
+        left: 38%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#three {
+    z-index: 2;
+
+    width: 7%;
+    transform: rotate(-80deg);
+
+    left: 35%;
+    bottom: 33%;
+}
+
+    #three:hover {
+        width: 8%;
+        left: 34%;
+    }
+
+    #threefocus {
+        width: 24%;
+
+        bottom: 0;
+        left: 34%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#four {
+    z-index: 3;
+
+    width: 10%;
+    transform: rotate(15deg);
+
+    left: 40%;
+    bottom: 5%;
+}
+
+    #four:hover {
+        width: 11%;
+        left: 39.5%;
+        bottom: 3.5%;
+    }
+
+    #fourfocus {
+        width: 13%;
+        
+        bottom: 0;
+        left: 40%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#five {
+    z-index: 2;
+
+    width: 6%;   
+    transform: rotate(60deg);
+
+    left: 49%;
+    bottom: 40%;
+}
+
+    #five:hover {
+        width: 7%;
+        bottom: 39%;
+        left: 50%;
+    }
+
+    #fivefocus {
+        width: 15%;
+
+        bottom: 0;
+        left: 38%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+.textbox {
+    
+    padding: 80px;
+    padding-top: 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+    .textbox section {
+        background: url(images/stickboxder.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex: 1;
+        margin-top: 20px;
+
+        padding: 20px;
+    }
+
+    .story {
+        margin-right: 200px;
+
+        color: white;
+
+        font-size: large;
+        line-height: 1.5;
+    }
+    
+        .story > p {
+            width: 70%;
+            margin-left: 15px;
+        }
+
+    .rating {
+        margin-left: 200px;
+
+        font-size: x-large;
+        line-height: 2.5;
+        text-align: right;
+        color: white;
+    }
+
+        .rating > p {
+            margin-right: 80px;
+        }
+
+        .rating > button {
+            position: absolute;
+            z-index: 1000000;
+
+            bottom: 20%;
+            right: 18%;
+
+            border-radius: 0;
+            background-color: burlywood;
+            border: 3px solid peru;
+
+            font-family: 'Sticks';
+
+            transition: all 0.25s;
+        }
+
+        .rating > button:hover {
+            filter: drop-shadow(2px 2px white);
+
+            scale: 125%;
+
+            transition: all 0.25s;
+        }
