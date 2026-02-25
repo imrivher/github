@@ -1,4 +1,287 @@
-html {
+@media screen and (max-width: 600px) {
+    html {
+        background-color: black;
+    }
+
+@font-face {
+    font-family: Sticks;
+    src: url(typefaces/Stick-Regular.ttf);
+}
+
+h1, h2, h3, p, a {
+    font-family: Sticks;
+    margin: 0;
+}
+
+header {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: 25px;
+
+    width: fit-content;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header h1, header h2 {
+    background-color: sienna;
+    border: 3px solid saddlebrown;
+
+    padding: 10px;
+}
+
+main .hidden {
+    display: none;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+
+    width: 600px;
+    height: 1000px;
+    background: url(images/stickbg-01.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+#position-box {
+    width: 1200px;
+    height: 750px;
+
+    transform: scale(125%);
+    
+    position: absolute;
+    z-index: 100;
+    left: -35%;
+    bottom: 10%;
+}
+
+img {
+    cursor: pointer;
+
+    height: auto;
+
+    position: absolute;
+
+    transition: all 0.25s;
+}
+
+img:hover {
+    filter: drop-shadow(4px 4px white);
+
+    transition: all 0.25s;
+}
+
+#one {
+    z-index: 2;
+
+    width: 10%;
+    transform: rotate(-80deg);
+
+    left: 31%;
+    bottom: 5%;
+}
+
+    #one:hover {
+        width: 11%;
+
+        left: 29.5%;
+    }
+
+    #onefocus {
+        width: 20%;
+        transform: rotate(0deg);
+
+        left: 43%;
+        bottom: 5%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#two {
+    z-index: 2;
+
+    width: 7%;
+    transform: rotate(50deg);
+
+    left: 45%;
+    bottom: 7%;
+}
+
+    #two:hover {
+        width: 8%;
+    }
+
+    #twofocus {
+        width: 16%;
+
+        transform: rotate(25deg);
+        bottom: 7%;
+        left: 45%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#three {
+    z-index: 2;
+
+    width: 7%;
+    transform: rotate(-80deg);
+
+    left: 35%;
+    bottom: 33%;
+}
+
+    #three:hover {
+        width: 8%;
+        left: 34%;
+    }
+
+    #threefocus {
+        width: 24%;
+
+        bottom: 5%;
+        left: 39%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#four {
+    z-index: 3;
+
+    width: 10%;
+    transform: rotate(15deg);
+
+    left: 40%;
+    bottom: 5%;
+}
+
+    #four:hover {
+        width: 11%;
+        left: 39.5%;
+        bottom: 3.5%;
+    }
+
+    #fourfocus {
+        width: 13%;
+        
+        bottom: 5%;
+        left: 50%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+#five {
+    z-index: 2;
+
+    width: 6%;   
+    transform: rotate(60deg);
+
+    left: 49%;
+    bottom: 40%;
+}
+
+    #five:hover {
+        width: 7%;
+        bottom: 39%;
+        left: 50%;
+    }
+
+    #fivefocus {
+        width: 15%;
+
+        bottom: 5%;
+        left: 43%;
+
+        filter: drop-shadow(4px 4px white);
+    }
+
+.textbox {
+    padding-top: 0;
+    padding-left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .textbox section {
+        background: url(images/stickboxder.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        flex: 1;
+        margin-top: 20px;
+        width: 50%;
+
+        padding: 20px;
+    }
+
+    .story {
+        color: white;
+        width: fit-content;
+
+        font-size: medium;
+        line-height: 1.5;
+
+        flex: 1;
+    }
+    
+        .story > p {
+            width: 70%;
+            margin-left: 15px;
+        }
+
+    .rating {
+        font-size: large;
+        line-height: 2.5;
+        color: white;
+
+        flex: 1;
+    }
+
+        .rating > p {
+            margin-left: 20px;
+        }
+
+        .rating > button {
+            position: absolute;
+            z-index: 1000000;
+
+            top: 10%;
+            right: 10%;
+
+            border-radius: 0;
+            background-color: burlywood;
+            border: 3px solid peru;
+
+            font-family: 'Sticks';
+            font-size: xx-large;
+
+            transition: all 0.25s;
+        }
+
+        .rating > button:hover {
+            filter: drop-shadow(2px 2px white);
+
+            scale: 125%;
+
+            transition: all 0.25s;
+        }
+}
+
+@media screen and (min-width: 601px) {
+    html {
     background-color: black;
 }
 
@@ -269,3 +552,4 @@ img:hover {
 
             transition: all 0.25s;
         }
+}
