@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>game on: html & css</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <!-- heading typeface -->
+        <!-- body typeface -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div id="content">
+            <header>
+                <section id="players">
+                    <h1>player 1</h1>
+                    <h1>player 2</h1>
+                </section>
+
+                <section id="counters">
+                    <div id="counter1">
+                        <img src="images/0.png" alt="the tens hours spot on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the ones hours spot on a digital clock" width="125" height="250">
+                        <img src="images/colon-white.png" alt="the colon seperator on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the tens minutes spot on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the ones minutes spot on a digital clock" width="125" height="250">
+                    </div>
+
+                    <div id="counter2">
+                        <img src="images/0.png" alt="the tens hours spot on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the ones hours spot on a digital clock" width="125" height="250">
+                        <img src="images/colon-white.png" alt="the colon seperator on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the tens minutes spot on a digital clock" width="125" height="250">
+                        <img src="images/0.png" alt="the ones minutes spot on a digital clock" width="125" height="250">
+                    </div>
+                </section>
+            </header>
+
+            <main id="spinner">
+                <section id="minuteslight">
+                    <p>min</p>
+                </section>
+
+                <section id="numberlights">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                </section>
+
+                <section id="hourslight">
+                    <p>hr</p>
+                </section>
+            </main>
+
+            <article id="gametext">
+                <p>you got 4 minutes, switching to player 2!</p>
+            </article>
+
+            <aside id="controls">
+                <button id="spin">spin</button>
+
+                <button id="stop">stop</button>
+
+                <a href="index.html" id="again" class="hidden">again?</a>
+            </aside>
+        </div>
+
+        <footer id="credits">
+            <p><em>des 157-a   -   winter 2026</em></p>
+            <p><em><a href="../../index.html">back to portal</a></em></p>
+            <p><em>made by river mcpherson</em></p>
+        </footer>
+    </body>
+</html>

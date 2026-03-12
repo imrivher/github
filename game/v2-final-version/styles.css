@@ -1,0 +1,156 @@
+/* 
+    black: #1a1a1a
+    white: #e6e6e6
+    reds:
+        light: #FF6464
+        dark: #993C3C
+*/
+
+:root {
+    overscroll-behavior: none;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, p, a, button{font-family: Sixtyfour;}
+
+h1, p, a {
+    margin: 0;
+
+    color: #e6e6e6;
+}
+
+.focus {
+    color: #FF6464;
+}
+
+body {
+    width: 1200px;
+    height: 750px;
+
+    background-color: #202020;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    #content {
+        box-sizing: border-box;
+        padding: 25px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            #players {
+                margin-bottom: 10px;
+
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #counters {
+                width: 100%;
+
+                display: flex;
+                gap: 25px;
+            }
+
+                #counters > div {
+                    flex: 1;
+
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 25px;
+
+                    background-color: #101010;
+                    border: 10px solid #000000;
+                    border-radius: 25px;
+
+                    display: flex;
+                    gap: 25px;
+                }
+
+                    #counters div img {
+                        width: 66%;
+                    }
+
+        main {
+            margin-left: auto;
+            margin-right: auto;
+
+            display: flex;
+            gap: 50px;
+        }
+
+            #numberlights {
+                display: flex;
+                gap: 25px;
+            }
+
+            main p {
+                flex: 1;
+
+                box-sizing: border-box;
+                padding: 10px 15px 5px;
+
+                background-color: #101010;
+                border: 5px solid #000000;
+
+                text-align: center;
+                font-size: 300%;
+            }
+
+            .amountlit p, .numberlit {
+                background-color: #FF6464;
+                border: 5px solid #993C3C;
+            }
+
+        #gametext {
+            box-sizing: border-box;
+            padding: 10px 25px;
+
+            background-color: #303030;
+            border: 3px solid #404040;
+        }
+
+        #controls {
+            margin-left: auto;
+            margin-right: auto;
+
+            display: flex;
+            gap: 25px;
+        }
+
+            #controls button {
+                box-sizing: border-box;
+                padding: 0 15px 5px;
+
+                background-color: #EFEFEF;
+                border: 5px solid #CFCFCF;
+
+                text-align: center;
+                font-size: 300%;
+            }
+
+        footer {
+            box-sizing: border-box;
+
+            width: 100%;
+            padding: 10px 25px;
+
+            background-color: #101010;
+
+            display: flex;
+            justify-content: space-between;
+        }
