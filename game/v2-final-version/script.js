@@ -14,10 +14,14 @@
     const gameText = document.querySelector('#gametext p');
     const spinBtn = document.querySelector('#spin');
     const stopBtn = document.querySelector('#stop');
-    
 
         // buttons
     const btns = document.querySelectorAll('#controls button');
+
+        // sounds
+    const boopSound = new Audio(('audio/boop.wav'));
+    const clickSound1 = new Audio('audio/click.wav');
+    const clickSound2 = new Audio('audio/clack.wav');
 
         // functionality vars
     const playerData = {
@@ -56,12 +60,14 @@
                 spinBtn.className = 'hidden';
                 setTimeout(function(){stopBtn.removeAttribute('class');}, 100);
                 isSpinning = true;
+                clickSound1.play();
                 spin();
             }else if(eachBtn.id === 'stop' || isSpinning === true){
                 stopBtn.className = 'hidden';
                 setTimeout(function(){spinBtn.removeAttribute('class');}, 100);
                 isSpinning = false
 
+                clickSound2.play();
                 setTimeout(function(){
                     const numberLight = document.querySelector('.numberlit').innerHTML;
                     const amountLight = document.querySelector('.amountlit');
@@ -88,6 +94,8 @@
                 }else{
                     document.querySelector('#hourslight').className = 'amountlit';
                 }
+
+                boopSound.play();
                 spinLoops++;
                 spin();
             }, 100);
