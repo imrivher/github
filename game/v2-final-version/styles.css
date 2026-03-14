@@ -1,156 +1,386 @@
-/* 
-    black: #1a1a1a
-    white: #e6e6e6
-    reds:
-        light: #FF6464
-        dark: #993C3C
-*/
-
 :root {
-    overscroll-behavior: none;
-}
+        overscroll-behavior: none;
+    }
 
-.hidden {
-    display: none;
-}
+    html .hidden {
+        display: none;
+    }
 
-h1, p, a, button{font-family: Sixtyfour;}
+    h1, h2, p, a, button, #startscreen label, input {font-family: Sixtyfour;}
 
-h1, p, a {
-    margin: 0;
+    h1, h2, p, a {
+        margin: 0;
 
-    color: #e6e6e6;
-}
+        color: #e6e6e6;
+    }
 
-.focus {
-    color: #FF6464;
-}
+    .focus {
+        color: #FF6464;
+    }
 
-body {
-    width: 1200px;
-    height: 750px;
-
-    background-color: #202020;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-    #content {
-        box-sizing: border-box;
-        padding: 25px;
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #202020;
 
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        justify-content: space-between;
     }
 
-        header {
+        #content {
+            box-sizing: border-box;
+            padding: 25px;
+
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 40px;
         }
 
-            #players {
-                margin-bottom: 10px;
+            header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+                #players {
+                    display: none;
+                }
+
+                #counters {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                }
+
+                    #counters > div {
+                        flex: 1;
+
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 25px;
+
+                        background-color: #101010;
+                        border: 10px solid #000000;
+                        border-radius: 25px;
+
+                        display: flex;
+                        gap: 25px;
+                    }
+
+                        #counters div img {
+                            width: 66%;
+                        }
+
+            main {
+                margin-left: auto;
+                margin-right: auto;
+
+                display: flex;
+                gap: 20px;
+            }
+
+                #numberlights {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                main p {
+                    flex: 1;
+
+                    box-sizing: border-box;
+                    padding: 10px 15px 5px;
+
+                    background-color: #101010;
+                    border: 5px solid #000000;
+
+                    text-align: center;
+                    font-size: x-small;
+                }
+
+                .amountlit p, .numberlit {
+                    background-color: #FF6464;
+                    border: 5px solid #993C3C;
+                }
+
+            #gametext {
+                box-sizing: border-box;
+                padding: 10px 25px;
+
+                background-color: #303030;
+                border: 3px solid #404040;
+            }
+
+            #controls {
+                margin-left: auto;
+                margin-right: auto;
+
+                display: flex;
+                gap: 25px;
+            }
+
+                #controls button {
+                    box-sizing: border-box;
+                    padding: 0 15px 5px;
+
+                    background-color: #EFEFEF;
+                    border: 5px solid #CFCFCF;
+
+                    text-align: center;
+                    font-size: 300%;
+                }
+
+                #again {
+                    padding: 0 15px 5px;
+
+                    background-color: #EFEFEF;
+                    border: 5px solid #CFCFCF;
+                    color: #000000;
+
+                    text-align: center;
+                    font-size: 300%;
+                }
+
+            footer {
+                box-sizing: border-box;
+
+                width: 100%;
+                padding: 10px 25px;
+
+                background-color: #101010;
 
                 display: flex;
                 justify-content: space-between;
             }
 
-            #counters {
-                width: 100%;
+        #startscreen {
+            box-sizing: border-box;
+            padding: 25px;
 
+            background-color: black;
+
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+        }
+
+            #startscreen main {
                 display: flex;
-                gap: 25px;
+                flex-direction: column;
+                gap: 6em;
             }
 
-                #counters > div {
-                    flex: 1;
+                h2 {
+                    font-size: 250%;
+                }
 
-                    box-sizing: border-box;
+                #startscreen p {
+                    font-size: x-large;
+                }
+
+                        #startscreen button {
+                            border-radius: 0;
+                            width: fit-content;
+                            margin: 0 auto;
+                            padding: 5px 10px;
+
+                            background-color: #EFEFEF;
+                            border: 5px solid #CFCFCF;
+                            color: #000000;
+
+                            font-size: x-large;
+                        }
+}
+
+@media screen and (min-width: 601px) {
+    body {
+        width: 1200px;
+        height: 750px;
+
+        background-color: #202020;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        #content {
+            box-sizing: border-box;
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+                #players {
+                    margin-bottom: 10px;
+
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                #counters {
                     width: 100%;
-                    padding: 25px;
-
-                    background-color: #101010;
-                    border: 10px solid #000000;
-                    border-radius: 25px;
 
                     display: flex;
                     gap: 25px;
                 }
 
-                    #counters div img {
-                        width: 66%;
+                    #counters > div {
+                        flex: 1;
+
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 25px;
+
+                        background-color: #101010;
+                        border: 10px solid #000000;
+                        border-radius: 25px;
+
+                        display: flex;
+                        gap: 25px;
                     }
 
-        main {
-            margin-left: auto;
-            margin-right: auto;
+                        #counters div img {
+                            width: 66%;
+                        }
 
-            display: flex;
-            gap: 50px;
-        }
+            main {
+                margin-left: auto;
+                margin-right: auto;
 
-            #numberlights {
+                display: flex;
+                gap: 50px;
+            }
+
+                #numberlights {
+                    display: flex;
+                    gap: 25px;
+                }
+
+                main p {
+                    flex: 1;
+
+                    box-sizing: border-box;
+                    padding: 10px 15px 5px;
+
+                    background-color: #101010;
+                    border: 5px solid #000000;
+
+                    text-align: center;
+                    font-size: 300%;
+                }
+
+                .amountlit p, .numberlit {
+                    background-color: #FF6464;
+                    border: 5px solid #993C3C;
+                }
+
+            #gametext {
+                box-sizing: border-box;
+                padding: 10px 25px;
+
+                background-color: #303030;
+                border: 3px solid #404040;
+            }
+
+            #controls {
+                margin-left: auto;
+                margin-right: auto;
+
                 display: flex;
                 gap: 25px;
             }
 
-            main p {
-                flex: 1;
+                #controls button {
+                    box-sizing: border-box;
+                    padding: 0 15px 5px;
 
+                    background-color: #EFEFEF;
+                    border: 5px solid #CFCFCF;
+
+                    text-align: center;
+                    font-size: 300%;
+                }
+
+                #again {
+                    padding: 0 15px 5px;
+
+                    background-color: #EFEFEF;
+                    border: 5px solid #CFCFCF;
+                    color: #000000;
+
+                    text-align: center;
+                    font-size: 300%;
+                }
+
+            footer {
                 box-sizing: border-box;
-                padding: 10px 15px 5px;
+
+                width: 100%;
+                padding: 10px 25px;
 
                 background-color: #101010;
-                border: 5px solid #000000;
 
-                text-align: center;
-                font-size: 300%;
+                display: flex;
+                justify-content: space-between;
             }
 
-            .amountlit p, .numberlit {
-                background-color: #FF6464;
-                border: 5px solid #993C3C;
-            }
-
-        #gametext {
+        #startscreen {
+            width: 1200px;
+            height: 750px;
             box-sizing: border-box;
-            padding: 10px 25px;
+            padding: 25px;
 
-            background-color: #303030;
-            border: 3px solid #404040;
-        }
+            background-color: black;
 
-        #controls {
-            margin-left: auto;
-            margin-right: auto;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
 
             display: flex;
-            gap: 25px;
+            flex-direction: column;
+            gap: 40px;
         }
 
-            #controls button {
-                box-sizing: border-box;
-                padding: 0 15px 5px;
-
-                background-color: #EFEFEF;
-                border: 5px solid #CFCFCF;
-
-                text-align: center;
-                font-size: 300%;
+            #startscreen main {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
             }
 
-        footer {
-            box-sizing: border-box;
+                h2 {
+                    font-size: 250%;
+                }
 
-            width: 100%;
-            padding: 10px 25px;
+                #startscreen p {
+                    font-size: x-large;
+                }
 
-            background-color: #101010;
+                        #startscreen button {
+                            border-radius: 0;
+                            width: fit-content;
+                            margin: 0 auto;
+                            padding: 5px 10px;
 
-            display: flex;
-            justify-content: space-between;
-        }
+                            background-color: #EFEFEF;
+                            border: 5px solid #CFCFCF;
+                            color: #000000;
+
+                            font-size: x-large;
+                        }
+}
